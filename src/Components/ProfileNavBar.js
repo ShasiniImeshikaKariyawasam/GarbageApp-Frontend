@@ -17,7 +17,6 @@ export default class ProfileNavBar extends Component {
 
     render() {
 
-
         if(this.props.loggedIn){
         return (
             <div>

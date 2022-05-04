@@ -19,10 +19,7 @@ export default class CustomerProfilePage extends Component {
                     <TabPane tab="Vehicle Registration" key="1">
                         <VehicleRegisterPage/>
                     </TabPane>
-                    <TabPane tab="Update Vehicle Details" key="2">
-                        <UpdateVehiclePage/>
-                    </TabPane>
-                    <TabPane tab="Vehicle Details" key="3">
+                    <TabPane tab="Vehicle Details" key="2">
                         <Vehicles/>
                     </TabPane>
                 </Tabs>

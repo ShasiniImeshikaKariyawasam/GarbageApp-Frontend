@@ -25,18 +25,18 @@ function VehicleRegisterPage() {
         <span className="registerTitle">Vehicle Registration</span>
         <Form className="registerform" onFinish={handleSubmit} form={form}>  
         <Form.Item
-            name="ownerId"
+            name="email"
             rules={[
-              { required: true, message: "Please enter your ID!" },
+              { required: true, message: "Please enter your email!" },
               { whitespace: true, message: "field cannot be empty" },
               {
-                type: "long",
-                min: 4,
-                message: "name must be at least 3 characters",
+                type: "string",
+                min: 5,
+                message: "email must be at least 5 characters",
               },
             ]}
           >
-            <Input placeholder="OwnerId" className="inputField"></Input>
+            <Input placeholder="Email" className="inputField"></Input>
           </Form.Item>
           <Form.Item
             name="type"

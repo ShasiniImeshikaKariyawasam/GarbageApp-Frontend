@@ -16,7 +16,7 @@ import Vehicles from './Pages/Vehicles';
 // const cors = require("cors");
 
 function App() {
-  
+   
   // app.use(cors());
 
   return (

@@ -10,32 +10,35 @@ function Vehicles() {
   const [form] = Form.useForm(); 
   let navigate = useNavigate();
 
+  const editRoute = () =>{ 
+    let path = `/updateVehicle`; 
+    navigate(path);
+  }
+
   const [vehicleDetails, setVehicleDetails] = useState([]);
 
   useEffect(() => {
     handleSubmit();
 }, []);
 
-
-
-
   const handleSubmit = (e) => {
     axios.get("http://localhost:8080/api/auth/vehicles",e).then((response)=>{
-        message.success("Vehicle Registration Successfull");
+        message.success("Retrieved Vehicle Details Successfull");
     //    console.log(response);
        if(response.data !== null) {
            setVehicleDetails(response.data);
        }
     }).catch((err)=>{
-        message.error("Registration Failed");
+        message.error("Retrieval Failed");
     });
   };
-  const ownerId = {
-    title: 'Owner ID',
+  
+  const email = {
+    title: 'Email',
     render: (_, record) => {
         return (
           <div className="ky_column">
-            <div>{record.ownerId}</div>
+            <div>{record.email}</div>
           </div>
         );
       },
@@ -51,7 +54,6 @@ function Vehicles() {
           </div>
         );
       },
-  
   }
 
   const vehicleNum = {
@@ -66,8 +68,24 @@ function Vehicles() {
   
   }
 
+  const edit = {
+    title: '',
+    render: (_, record) => {
+        return (
+          <div className="ky_column">
+            <div>
+            <Button type="primary" htmlType="submit" onClick={editRoute} block >
+              Edit
+            </Button>
+            </div>
+          </div>
+        );
+      },
+  
+  }
+
   const columns = [
-    ownerId,type,vehicleNum
+    email,type,vehicleNum,edit
   ];
 
   return (
