@@ -32,7 +32,7 @@ function Vehicles() {
         message.error("Retrieval Failed");
     });
   };
-  
+
   const email = {
     title: 'Email',
     render: (_, record) => {
@@ -65,8 +65,7 @@ function Vehicles() {
           </div>
         );
       },
-  
-  }
+    }
 
   const edit = {
     title: '',

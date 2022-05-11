@@ -13,6 +13,7 @@ import VehicleRegisterPage from './Pages/VehicleRegisterPage';
 import UpdateVehiclePage from './Pages/UpdateVehiclePage';
 import CustomerProfilePage from './Pages/CustomerProfilePage';
 import Vehicles from './Pages/Vehicles';
+import CustomerProfile from './Pages/CustomerProfile';
 // const cors = require("cors");
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
             <Route exact path="/vehicleRegister" element={<VehicleRegisterPage/>} />
             <Route exact path="/updateVehicle" element={<UpdateVehiclePage/>} />
             <Route exact path="/vehicles" element={<Vehicles/>} />
+            <Route exact path="/customerProfile" element={<CustomerProfile/>} />
           </Routes>
         </BrowserRouter> 
 
